@@ -18,6 +18,7 @@ const SingleCocktail = () => {
     } catch (error) {
       dispatch({ type: "ERROR", payload: error.message });
     }
+    //eslint-disable-next-line
   }, [id]);
 
   useEffect(() => {

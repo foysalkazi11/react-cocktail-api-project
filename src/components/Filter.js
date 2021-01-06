@@ -6,6 +6,7 @@ const Filter = () => {
   const [drinkCatagory, setdrinkCatagory] = useState("");
   useEffect(() => {
     dispatch({ type: "FILTER_DATA", payload: drinkCatagory });
+    //eslint-disable-next-line
   }, [drinkCatagory]);
 
   return (
