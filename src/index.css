@@ -61,28 +61,39 @@ body{
   
 }
 .home{
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
   padding: 1rem;
   
 }
 .cocktail-container{
-  
+  width: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   grid-auto-rows: auto;
   grid-gap: 1rem;
+  margin: 0 auto;
   
 }
 .inv-cocktail{
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   margin: 0 auto;
   box-shadow: 2px 2px 2px rgba(0,0,0,.5);
 }
+.inv-cocktail img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .inv-cocktail .inv-cocktail-info{
   margin: 10px 0;
   padding:0 10px ;
@@ -164,9 +175,10 @@ body{
   margin: 2rem auto;
 }
 .single-cocktail-container{
+  width: 100%;
   max-width: 720px;
-  
   margin: 0 auto;
+  padding: 0 1rem;
   
 }
 .single-cocktail-container h2{
@@ -179,25 +191,38 @@ body{
 }
 .single-cocktail-container .single-cocktail-info{
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 2rem 1rem;
+  margin: 0 auto;
+  
+}
+.single-cocktail-container .single-cocktail-info .img-container,
+.single-cocktail-container .single-cocktail-info .cocktail-info{
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+}
+.single-cocktail-container .single-cocktail-info .cocktail-info .info{
+  width: 100%;
+  max-width: 300px;
+}
+@media(max-width:700px){
+  .single-cocktail-container .single-cocktail-info{
+    grid-template-columns: 1fr ;
   
-  
+  }
 }
 .single-cocktail-container .single-cocktail-info img{
-  width: 250px;
+  width: 300px;
   height: 250px;
   object-fit: "cover";
-  margin:0 1rem;
+  
   
 }
-.single-cocktail-container .single-cocktail-info .cocktail-info{
-  
-  margin:0 1rem;
-  
-}
+
 /* .single-cocktail-container .single-cocktail-info .cocktail-info p span{
   background-color: rgba(0,0,0,.5);
   padding: 2px 5px;
@@ -205,11 +230,12 @@ body{
 .single-cocktail-container .single-cocktail-info .cocktail-info p,
 .single-cocktail-container .single-cocktail-info .cocktail-info button{
   
-  margin:5px 0;
+  margin:6px 0;
   
 }
 .single-cocktail-container .single-cocktail-info .cocktail-info button {
   padding: 5px 10px;
+  margin-top: 1rem;
   border: none;
   outline-style: none;
   background-color: #d35400;
@@ -218,8 +244,6 @@ body{
   cursor: pointer;
 }
 .single-cocktail-container .single-cocktail-info .cocktail-info button a{
-  
-  
   color: white;
 }
 .about h2{

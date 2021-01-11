@@ -34,15 +34,7 @@ const Cocktail = () => {
             } = drink;
             return (
               <div className="inv-cocktail" key={idDrink}>
-                <img
-                  src={strDrinkThumb}
-                  alt="strDrinkThumb"
-                  style={{
-                    width: "200px",
-                    height: "200px",
-                    objectFit: "cover"
-                  }}
-                />
+                <img src={strDrinkThumb} alt="strDrinkThumb" />
                 <div className="inv-cocktail-info">
                   <h4>{strDrink}</h4>
                   <h5>{strGlass}</h5>

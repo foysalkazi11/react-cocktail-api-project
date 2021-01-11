@@ -42,33 +42,37 @@ const DisplaySingleCocktail = ({ singleCocktail }) => {
             <h2>{strDrink}</h2>
             <div className="underline"></div>
             <div className="single-cocktail-info">
-              <img src={strDrinkThumb} alt="drink Img" />
+              <div className="img-container">
+                <img src={strDrinkThumb} alt="drink Img" />
+              </div>
               <div className="cocktail-info">
-                <p>
-                  <span>Modified Data : </span> {dateModified.slice(0, 10)}
-                </p>
-                <p>
-                  <span>Name : </span> {strDrink}
-                </p>
-                <p>
-                  <span>Glass : </span> {strGlass}
-                </p>
-                <p>
-                  <span>Catagory : </span> {strCategory}
-                </p>
-                <p>
-                  <span>Alcoholic : </span> {strAlcoholic}
-                </p>
-                <p>
-                  <span>Ingredient : </span>
-                  {ingredient.map((ing, index) => {
-                    return ing ? <span key={index}>{`${ing} `}</span> : null;
-                  })}
-                </p>
-                <p>Instructions : {strInstructions}</p>
-                <button>
-                  <Link to="/">Back Home</Link>
-                </button>
+                <div className="info">
+                  <p>
+                    <span>Modified Data : </span> {dateModified.slice(0, 10)}
+                  </p>
+                  <p>
+                    <span>Name : </span> {strDrink}
+                  </p>
+                  <p>
+                    <span>Glass : </span> {strGlass}
+                  </p>
+                  <p>
+                    <span>Catagory : </span> {strCategory}
+                  </p>
+                  <p>
+                    <span>Alcoholic : </span> {strAlcoholic}
+                  </p>
+                  <p>
+                    <span>Ingredient : </span>
+                    {ingredient.map((ing, index) => {
+                      return ing ? <span key={index}>{`${ing} `}</span> : null;
+                    })}
+                  </p>
+                  <p>Instructions : {strInstructions}</p>
+                  <button>
+                    <Link to="/">Back Home</Link>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
